@@ -1,0 +1,2 @@
+include ':app', ':demo_component_login', ':demo_component_main', ':demo_common_base', ':demo_component_message'
+rootProject.name='CCTrainer'

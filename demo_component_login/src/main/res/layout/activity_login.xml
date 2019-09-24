@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/refresh_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:text="刷新首页文字"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/login_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:text="登录"/>
+
+</LinearLayout>

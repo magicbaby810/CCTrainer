@@ -1,0 +1,53 @@
+apply from: rootProject.file('cc-settings-2.gradle')
+
+android {
+    compileSdkVersion rootProject.compileVersion
+
+
+
+    defaultConfig {
+        multiDexEnabled true
+        minSdkVersion rootProject.minVersion
+        targetSdkVersion rootProject.compileVersion
+        versionCode 1
+        versionName "1.0"
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : rootProject.applicationId,
+                JPUSH_APPKEY : JPUSH_APP_KEY,//JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        demo_test {
+        }
+    }
+
+    //指定jdk版本
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/debug/java']
+            res.srcDirs =['src/main/res', 'src/main/debug/res']
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    //依赖注入
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    implementation project(path: ':demo_common_base')
+}

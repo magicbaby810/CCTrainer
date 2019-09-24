@@ -1,0 +1,35 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sk.demo_component_message">
+
+
+
+    <application >
+
+
+        <activity android:name=".MessageActivity"/>
+
+        <!-- 极光推送 -->
+        <service android:name="cn.jpush.android.service.PushService"
+            android:process=":multiprocess"
+            tools:node="replace" />
+        <!--极光广播接收器-->
+        <receiver android:name=".receiver.MyReceiver" >
+            <intent-filter>
+                <!--Required 用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!--Required 用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!--Required 用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!--Required 用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <category android:name="com.sk.cctrainer" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
