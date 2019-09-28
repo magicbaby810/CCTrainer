@@ -53,7 +53,7 @@ CC的文档也是极尽详细，大家按着文档里的步骤一步一步来就
 	    mRxManager.clear();
 	}
 	```
-而`onDestroy`在什么时候调用呢？答案肯定是在`baseactivity`的`onDestroy`里通过`mPresenter`去调用。
+	而`onDestroy`在什么时候调用呢？答案肯定是在`baseactivity`的`onDestroy`里通过`mPresenter`去调用。
 
 	```
 	@Override
@@ -64,6 +64,6 @@ CC的文档也是极尽详细，大家按着文档里的步骤一步一步来就
 		    mPresenter.onDestroy();
 	}
     	```
-这样等于在调用网络请求的同时，把订阅事件都给管理起来，在界面销毁的时候去取消这些订阅事件。
+	这样等于在调用网络请求的同时，把订阅事件都给管理起来，在界面销毁的时候去取消这些订阅事件。
 
 
