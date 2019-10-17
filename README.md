@@ -99,7 +99,8 @@ CCTrainer集成几个通用的三方库，BUGLY、JPUSH等，如果你用的哪�
 而CC就是这样的，CC把所有的模块拍平，不再存在主次关系，有的只是每个模块依赖一个公共库而已。
 
 #### 更新：
-<font color=#FF1493 size=3 >这里再跟大家说个小技巧，集成CC后，组件之间都是平级关系，大家在build variants里去切换环境的时候，各组件需要一个一个切换，每切一次都要等待很长时间的gradle sync，后来才发现，在右侧功能栏Gradle里，app->install下面，可以一步切换不同环境，另外，如果连着多台设备，也会同步安装，真的是省心省力。唯一的不足是安装后，是不会立马运行起来，需要手动打开。</font>
+<font color=#FF1493 size=3 >这里再跟大家说个小技巧，集成CC后，组件之间都是平级关系，大家在build variants里去切换环境的时候，各组件需要一个一个切换，每切一次都要等待很长时间的gradle sync，后来才发现，在右侧功能栏Gradle里，app->install下面，可以一步切换不同环境，另外，如果连着多台设备，也会同步安装，真的是省心省力。唯一的不足是安装后，是不会立马运行起来，需要手动打开。</font>  
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191017103323777.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21hZ2ljYmFieTgxMA==,size_16,color_FFFFFF,t_70)
 
 
