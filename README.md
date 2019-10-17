@@ -1,7 +1,6 @@
-
 ## CCTrainer
-
-#### 目的：尽可能帮助改造原有项目和新手接入CC，产生的各种困惑
+[CC老司机](https://github.com/magicbaby810/CCTrainer)  邀你上车一起耍
+#### 目的：尽可能帮助更多改造原有项目和新手接入CC，产生的各种困惑
 
 1. 接入成本是否高
 2. 接入后网络框架是否可抽离
@@ -42,7 +41,7 @@ CC的文档也是极尽详细，大家按着文档里的步骤一步一步来就
 	public static <T> T getApiService(Class<T> tClass) {
 	        return getRetrofit().create(tClass);
 	}
-	```  
+	```
 	  
 	  
 
@@ -98,6 +97,10 @@ CCTrainer集成几个通用的三方库，BUGLY、JPUSH等，如果你用的哪�
 
 项目变大之后，带来最直观的感受就是编译一次耗时比之前更慢了，依赖库越来越多，依赖的层级关系越来越复杂，A依赖B、C、D、E、F，BCDEF又依赖着公共库，公共库里又一堆三方库，公共库又依赖着网络库等等。这就是拖死项目编译时间鬼畜依赖。如果把项目的模块都打平，不再存在主壳app，所有的模块全是平级关系，而公共库只有一个为各模块提供公共依赖，那样，上面的关系将会变的简单多。  
 而CC就是这样的，CC把所有的模块拍平，不再存在主次关系，有的只是每个模块依赖一个公共库而已。
+
+#### 更新：
+<font color=#FF1493 size=3 >这里再跟大家说个小技巧，集成CC后，组件之间都是平级关系，大家在build variants里去切换环境的时候，各组件需要一个一个切换，每切一次都要等待很长时间的gradle sync，后来才发现，在右侧功能栏Gradle里，app->install下面，可以一步切换不同环境，另外，如果连着多台设备，也会同步安装，真的是省心省力。唯一的不足是安装后，是不会立马运行起来，需要手动打开。</font>
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20191017103323777.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21hZ2ljYmFieTgxMA==,size_16,color_FFFFFF,t_70)
 
 
 
