@@ -40,7 +40,6 @@
 
 
     <application
-        android:name=".UserApplication"
         android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="false">
 
