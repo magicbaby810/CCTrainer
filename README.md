@@ -1,5 +1,5 @@
 ## CCTrainer
-[CC老司机](https://github.com/magicbaby810/CCTrainer)  邀你上车一起耍
+[CC老司机](https://github.com/magicbaby810/CCTrainer)  邀你上车一起耍 （仅供参考）
 #### 目的：尽可能帮助更多改造原有项目和新手接入CC，产生的各种困惑
 
 1. 接入成本是否高
